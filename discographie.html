@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Métadonnées de base du site -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site d'actualités non officiel sur Pierre Garnier">
+        <meta name="keywords" content="Pierre Garnier, musique, actualités, concerts, artiste">
+    
+        <!-- Balises Open Graph pour le partage sur les réseaux sociaux -->
+        <meta property="og:title" content="Pierre Vibes - Site non-officiel">
+        <meta property="og:description" content="Découvrez toute l'actualité de Pierre Garnier : concerts, musique et plus encore !">
+        <meta property="og:image" content="./images/5.png">
+        <meta property="og:url" content="https://ton-site.com">
+    
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image">
+    
+        <!-- Autoriser les moteurs de recherche à indexer le site -->
+        <meta name="robots" content="index, follow">
+    
+        <!-- Titre de l'onglet -->
+        <title>Pierre Vibes - Site non-officiel</title>
+    
+        <!-- Favicon du site -->
+        <link rel="icon" href="./images/logo.png" type="image/png">
+    
+        <!-- Feuille de style principale -->
+        <link rel="stylesheet" href="discographie.css">
+    
+        <!-- Icônes Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <!-- Feuille de style pour Leaflet (carte interactive) -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
+<body>
+
+    <!-- Banderole -->
+    <section class="banner">
+        <img src="./images/5.png" alt="Logo Pierre Vibes sur une bannière colorée">
+    </section>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"></i><a href="./index.html">Accueil</a></li>
+                <li><i class="fas fa-user"></i><a href="./bio.html">Biographie</a></li>
+                <li><i class="fas fa-record-vinyl"></i><a href="./discographie.html">Discographie</a></li>
+            </ul>
+        </nav>
+
+        <button id="dark-mode-toggle">
+            <i class="fas fa-moon"></i> Mode sombre
+        </button>
+
+    </header>
+
+    <main>
+
+        <section class="discography">
+
+            <!-- Section Albums -->
+
+            <section class="section-box">
+                <h2>Album</h2>
+                <img src="./images/Cover.jpg" alt="Pochette de l'album Chaque Seconde" class="album-cover">
+
+                <h4 class="album-title">Chaque Seconde (2024)</h4>
+                
+                <div class="tracklist-container">
+                    <ul class="tracklist">
+                        <li>1. Comment faire</li>
+                        <li>2. Les mots</li>
+                        <li>3. Ceux qu'on était</li>
+                        <li>4. Chaque seconde</li>
+                        <li>5. L'horizon</li>
+                        <li>6. Nous on sait</li>
+                        <li>7. Pas une larme (feat. Sofiane Pamart)</li>
+                        <li>8. Sur pause</li>
+                        <li>9. Ce qui me va</li>
+                        <li>10. À mes côtés</li>
+                        <li>11. Comme toi</li>
+                        <li>12. Tout en mieux</li>
+                        <li>13. Ceux qu'on était (acoustique)</li>
+                        <li>14. Ceux qu'on était (piano)</li>
+                    </ul>
+                </div>
+                
+                <h4 class="album-title">Réédition (2024)</h4>
+                
+                <div class="tracklist-container">
+                    <ul class="tracklist">
+                        <li>15. Contrôle</li>
+                        <li>16. Laisse</li>
+                        <li>17. Adieu, nous deux</li>
+                        <li>18. Maintenant</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Section Singles -->
+                <div class="singles">
+                    <h2>Singles</h2>
+                    <div class="single-item">
+                        <p><strong>Ceux qu'on était</strong> (2024) <br>
+                        Premier single, devenu viral sur les réseaux et en tête des classements.</p>
+                    </div>
+                    <div class="single-item">
+                        <p><strong>Nous on sait</strong> (2024) <br>
+                        Un titre pop émouvant qui parle d'amitié et de souvenirs.</p>
+                    </div>
+                    <div class="single-item">
+                        <p><strong>Adieu, nous deux</strong> (2024) <br>
+                        Un morceau puissant et mélancolique sur la fin d'une histoire d'amour.</p>
+                    </div>
+                </div>
+            </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Actualités Pierre Garnier - Site de fan non-officiel - Tous droits réservés <br>
+            Ce site n'est pas affilié à Pierre Garnier ou à son équipe de management.</p>
+        <p><a href="./mentions-legales.html">Mentions légales</a> | <a href="./politiques-confidentialité.html">Politique de confidentialité</a></p>
+    </footer>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script chargé !");
+    
+    // Sélectionne toutes les tracklists et cache-les initialement
+    let tracklists = document.querySelectorAll(".tracklist-container");
+    let albumTitles = document.querySelectorAll(".album-title");
+
+    // Fonction pour afficher progressivement les morceaux d'une tracklist
+    function showTracks(tracks) {
+        tracks.forEach((track, index) => {
+            setTimeout(() => {
+                track.style.opacity = "1";
+                track.style.transform = "translateX(0)";
+            }, index * 200);
+        });
+    }
+
+    // Fonction pour cacher les morceaux
+    function hideTracks(tracks) {
+        tracks.forEach(track => {
+            track.style.opacity = "0";
+            track.style.transform = "translateX(-20px)";
+        });
+    }
+
+    // Gère l'affichage/masquage des tracklists au clic sur un titre d'album
+    albumTitles.forEach(title => {
+        title.addEventListener("click", function () {
+            let tracklistContainer = this.nextElementSibling;
+
+            if (tracklistContainer && tracklistContainer.classList.contains("tracklist-container")) {
+                tracklistContainer.classList.toggle("active");
+
+                let tracks = tracklistContainer.querySelectorAll(".tracklist li");
+
+                if (tracklistContainer.classList.contains("active")) {
+                    showTracks(tracks);
+                } else {
+                    hideTracks(tracks);
+                }
+            }
+        });
+    });
+
+    // Affichage progressif des chansons au chargement de la page
+    tracklists.forEach(container => {
+        let tracks = container.querySelectorAll(".tracklist li");
+        showTracks(tracks);
+    });
+});
+
+    </script>
+
+    <script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    // Vérifie si le mode sombre est activé et met à jour l'icône
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // ☀️ Icône du soleil (clair)
+    } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // 🌙 Icône de la lune (sombre)
+    }
+
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // ☀️
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // 🌙
+        }
+    });
+});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Métadonnées de base du site -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site d'actualités non officiel sur Pierre Garnier">
+        <meta name="keywords" content="Pierre Garnier, musique, actualités, concerts, artiste">
+    
+        <!-- Balises Open Graph pour le partage sur les réseaux sociaux -->
+        <meta property="og:title" content="Pierre Vibes - Site non-officiel">
+        <meta property="og:description" content="Découvrez toute l'actualité de Pierre Garnier : concerts, musique et plus encore !">
+        <meta property="og:image" content="./images/5.png">
+        <meta property="og:url" content="https://ton-site.com">
+    
+        <!-- Twitter card -->
+        <meta name="twitter:card" content="summary_large_image">
+    
+        <!-- Autoriser les moteurs de recherche à indexer le site -->
+        <meta name="robots" content="index, follow">
+    
+        <!-- Titre de l'onglet -->
+        <title>Pierre Vibes - Site non-officiel</title>
+    
+        <!-- Favicon du site -->
+        <link rel="icon" href="./images/logo.png" type="image/png">
+    
+        <!-- Feuille de style principale -->
+        <link rel="stylesheet" href="bio.css">
+    
+        <!-- Icônes Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+        <!-- Feuille de style pour Leaflet (carte interactive) -->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    </head>
+<body>
+
+    <!--Section avec une bannière d'accueil -->
+    <section class="banner">
+        <img src="./images/5.png" alt="Logo Pierre Vibes sur une bannière colorée">
+    </section>
+
+    <!-- En-tête avec le menu de navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"></i><a href="./index.html" aria-label="Accueil">Accueil</a></li>
+                <li><i class="fas fa-user"></i><a href="./bio.html" aria-label="Biographie">Biographie</a></li>
+                <li><i class="fas fa-record-vinyl"></i><a href="./discographie.html" aria-label="Discographie">Discographie</a></li>
+            </ul>
+        </nav>
+
+        <!-- Bouton pour activer/désactiver le mode sombre -->
+        <button id="dark-mode-toggle">
+            <i class="fas fa-moon"></i> Mode sombre
+        </button>
+    </header>
+
+    <main>
+
+        <!-- Contenu principal de la page -->
+        <section class="bio-content">
+
+            <!-- Image principal de Pierre -->
+            <article class="bio-img">
+                <img src="./images/Pierre-Garnier.jpg" alt="Portrait de Pierre Garnier, artiste français" />                
+            </article>
+
+            <!-- Ligne du temps : événements marquants -->
+            <section class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date"><strong>6 Mars 2002</strong></div>
+                    <div class="timeline-event">Naissance</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date"><strong>4 Nov 2023</strong></div>
+                    <div class="timeline-event">Entrée à la Star Academy</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date"><strong>3 Fév 2024</strong></div>
+                    <div class="timeline-event">Gagnant de la Star Academy</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date"><strong>7 Mars 2024</strong></div>
+                    <div class="timeline-event">Sortie du single "Ceux qu'on était"</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date"><strong>7 Juin 2024</strong></div>
+                    <div class="timeline-event">Sortie de l'album "Chaque Seconde"</div>
+                </div>
+            </section>
+
+            <!-- Biographie détaillée en plusieurs sections -->
+            <h2>Jeunesse et éducation</h2>
+
+                <p>Pierre Garnier est un artiste français né le 6 Mars 2002 à Caen.</p>
+                <p>Il passe une bonne partie de son enfance du côté de Villedieu-les-Poêles nichée dans le département de la Manche.
+                    Passionnée par la musique, il apprend seul les instruments de musique. Pierre progresse dans la maîtrise de la guitare et de la batterie.
+                    Très vite, il commence à composer ses propres morceaux.
+                </p>
+                <p>Il prend la direction de la voie universitaire en poursuivant un DUT Techniques de Commercialisation.</p>
+
+            <br>
+
+            <h2>L'aventure Star Academy</h2>
+
+                <p>Pierre intègre le célèbre château de Dammarie-les-Lys pour la nouvelle saison de la Star Academy promo 2023.
+                    Au côtés de Héléna Bailly, Axel Marbeuf, Lenie Vacher ou bien Julien Lieb, le jeune Pierre se fait connaître du grand public lors du prime de lancement le 4 Novembre 2023.
+                </p>
+                <p>Au fur et à mesure des quotidiennes, Pierre se montre comme un amoureux de la musique. Le public le voit beaucoup avec une guitare à la main ou alors au piano.
+                    Pierre Garnier est un candidat simple, authentique, drôle et attachant mais aussi sérieux et impliqué.
+                    Qualifié pour les demi-finales de la compétition, il accède ensuite à la finale diffusée le 3 février 2024. 
+                    Il gagne cette saison 11 de la Star Academy face à son ami, Julien.
+                </p>
+
+            <br>
+    
+            <h2>Les meilleures prestations</h2>
+
+                <p>Parmi ces nombreuses prestations durant les 3 mois d'aventure, Pierre a impressionné le public avec des prestations incroyables comme son duo avec Héléna sur la chanson Shallow,
+                    son duo avec Woodkid sur Run Boy Run, ou son duo avec Yseult sur Corps lors de la finale.
+                    Mais il est incroyable aussi en solo avec par exemple Pour que tu m'aimes encore et l'Hymne à l'Amour. 
+                </p>
+
+            <br>
+
+            <h2>Star Academy Tour 2024</h2>
+
+                <p>Une fois la victoire passée, Pierre et ses amis, Julien, Axel, Héléna, Candice, Djebril et Lenie, vont partir sur les routes de France, de Belgique et de Suisse pour 75 dates de concerts qui connaîtra un immense succès.
+                    Durant la tournée, les 7 artistes peuvent rencontrer, le temps des balances et d'une photo pour rencontrer leurs fans. Les fans leur offrent à chaque dates de nombreux cadeaux pour chacun d'entre eux.
+                </p>
+
+            <br>
+
+            <h2>Carrière Solo</h2>
+
+                <p>Tout s'enchaîne très vite pour le gagnant. À peine sorti du château, que Pierre fait déjà son entrée en studio. Il surfe sur le succès incroyable de son premier single, Ceux qu'on était.
+                    Sur les réseaux sociaux, les videos reprenant sa chanson tournent partout. Ce single occupe la première place des téléchargements sur iTunes France et dépasse le seuil du million de stream en une journée.
+                    La version acoustique est également annoncée pour une sortie rapide. 
+                </p>
+
+            </section>
+            
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Actualités Pierre Garnier - Site de fan non-officiel - Tous droits réservés <br>
+            Ce site n'est pas affilié à Pierre Garnier ou à son équipe de management.</p>
+        <p><a href="./mentions-legales.html">Mentions légales</a> | <a href="./politiques-confidentialité.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const items = document.querySelectorAll('.timeline-item');
+    
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                    }
+                });
+            });
+    
+            items.forEach(item => observer.observe(item));
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("dark-mode-toggle");
+    const body = document.body;
+
+    // Vérifie si le mode sombre est activé et met à jour l'icône
+    if (localStorage.getItem("darkMode") === "enabled") {
+        body.classList.add("dark-mode");
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // ☀️ Icône du soleil (clair)
+    } else {
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // 🌙 Icône de la lune (sombre)
+    }
+
+    toggleButton.addEventListener("click", function () {
+        body.classList.toggle("dark-mode");
+
+        if (body.classList.contains("dark-mode")) {
+            localStorage.setItem("darkMode", "enabled");
+            toggleButton.innerHTML = '<i class="fas fa-sun"></i>'; // ☀️
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+            toggleButton.innerHTML = '<i class="fas fa-moon"></i>'; // 🌙
+        }
+    });
+});
+    </script>
+    
+
+</body>
+</html>
+
+

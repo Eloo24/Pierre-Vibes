@@ -1,0 +1,16 @@
+[
+    {
+        "title": "Interview sur Europe 1",
+        "date": "2025-02-13",
+        "description": "Le Portrait de Pierre Garnier par Jean-Luc Lemoine",
+        "link": "https://www.youtube.com/watch?v=1wo5jaWUTFw",
+        "image": "images/Europe1.png"
+    },
+    {
+        "title": "Interview sur Ouest-France",
+        "date": "2025-03-30",
+        "description": "La folle ascencion de Pierre Garnier",
+        "link": "https://www.youtube.com/watch?v=M238LNYh2OM",
+        "image": "images/Ouest-France.png"
+    }
+]

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Métadonnées de base du site -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site d'actualités non officiel sur Pierre Garnier">
+    <meta name="keywords" content="Pierre Garnier, musique, actualités, concerts, artiste">
+
+    <!-- Balises Open Graph pour le partage sur les réseaux sociaux -->
+    <meta property="og:title" content="Pierre Vibes - Site non-officiel">
+    <meta property="og:description" content="Découvrez toute l'actualité de Pierre Garnier : concerts, musique et plus encore !">
+    <meta property="og:image" content="./images/5.png">
+    <meta property="og:url" content="https://ton-site.com">
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Autoriser les moteurs de recherche à indexer le site -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Titre de l'onglet -->
+    <title>Pierre Vibes - Site non-officiel</title>
+
+    <!-- Favicon du site -->
+    <link rel="icon" href="./images/logo.png" type="image/png">
+
+    <!-- Feuille de style principale -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icônes Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Feuille de style pour Leaflet (carte interactive) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <!-- Section avec une bannière d'accueil -->
+    <section class="banner">
+        <img src="./images/5.png" alt="Logo Pierre Vibes sur une bannière colorée">
+    </section>
+
+    <!-- En-tête avec le menu de navigation et le bouton mode sombre -->
+    <header>
+        <nav>
+            <ul>
+                <li><i class="fas fa-home"></i><a href="./index.html">Accueil</a></li>
+                <li><i class="fas fa-user"></i><a href="./bio.html">Biographie</a></li>
+                <li><i class="fas fa-record-vinyl"></i><a href="./discographie.html">Discographie</a></li>
+            </ul>
+        </nav>
+
+        <!-- Bouton pour activer/désactiver le mode sombre -->
+        <button id="dark-mode-toggle">
+            <i class="fas fa-moon"></i> Mode sombre
+        </button>
+    </header>
+
+    <main>
+
+        <!-- Liens vers les réseaux sociaux de Pierre Garnier -->
+        <section class="social-media">
+            <div class="social-icons">
+                <a href="https://www.instagram.com/pierregarniermusique" target="_blank">
+                    <img src="./images/insta-removebg-preview.png" alt="Icône Instagram de Pierre">
+                </a>
+                <a href="https://www.tiktok.com/@pierregarniermusique" target="_blank">
+                    <img src="./images/image-removebg-preview.png" alt="Icône TikTok de Pierre">
+                </a>
+                <a href="https://www.youtube.com/@PierreGarnierMusic" target="_blank">
+                    <img src="./images/youtube-removebg-preview.png" alt="Icône YouTube de Pierre">
+                </a>
+            </div>
+        </section>
+
+        <!-- Diaporama (slideshow) d'images de Pierre Garnier -->
+        <section class="slideshow">
+            <div class="slides">
+                <img src="./images/Pierre Garnier1.webp" class="slide active" loading="lazy">
+                <img src="./images/Pierre Garnier2.jpg" class="slide" loading="lazy">
+                <img src="./images/Pierre Garnier3.jpg" class="slide" loading="lazy">
+                <img src="./images/Pierre Garnier4.jpg" class="slide" loading="lazy">
+                <img src="./images/Pierre Garnier5.webp" class="slide" loading="lazy">
+            </div>
+        </section>
+
+        <!-- Section des dernières actualités -->
+        <section class="actualites">
+            <h2>📰 Dernières actualités</h2>
+            <div id="news-container"></div>
+        </section>
+
+        <!-- Carte interactive des concerts dans les Zéniths -->
+        <section class="concert-map">
+            <h2>📍 Concerts des Zéniths</h2>
+            <div id="map"></div>
+        </section>
+
+        <!-- Liste des concerts du mois en cours -->
+        <section class="concert-list">
+            <h2>🎤 Concerts de <span id="current-month"></span></h2>
+            
+            <!-- Navigation pour changer de mois -->
+            <div class="month-navigation">
+                <button id="prev-month"><img src="./images/arrow_left.png" alt="flèche retour"></button>
+                <button id="next-month"><img src="./images/arrow_right.png" alt="flèche suivante"></button>
+            </div>
+            
+            <!-- Liste dynamique des concerts -->
+            <ul id="concerts-container"></ul>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025 Actualités Pierre Garnier - Site de fan non-officiel - Tous droits réservés <br>
+            Ce site n'est pas affilié à Pierre Garnier ou à son équipe de management.</p>
+        <p><a href="./mentions-legales.html">Mentions légales</a> | <a href="./politiques-confidentialité.html">Politique de confidentialité</a></p>
+    </footer>
+
+    <!-- Script pour afficher la carte Leaflet -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Script principal du site -->
+    <script src="./script.js"></script>
+
+    <!-- Bannière de cookies avec options -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Ce site utilise des cookies pour améliorer votre expérience et analyser l'audience. Vous pouvez accepter ou refuser leur utilisation.</p>
+        <button id="accept-cookies">Accepter</button>
+        <button id="decline-cookies">Refuser</button>
+        <a href="./politiques-confidentialité.html">En savoir plus</a>
+    </div>
+
+</body>
+</html>
